@@ -1,0 +1,200 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap');
+
+
+body{
+	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
+}
+
+.sidebar{
+	background-color: #a6a5a4;
+	min-height: 100vh;
+	position: relative;
+
+	.logo{
+		margin-top: 30px;
+		h4{
+			color: #fff;
+			font-weight: 800;
+		}
+	}
+
+	
+
+	.social-media{
+		background-color: #332b28;
+		color: #fab200;
+		font-size: 30px;
+		border-radius: 50px;
+		position: absolute;
+		bottom: 15px;
+		left: 15px;
+		right: 15px;
+	}
+
+	.menu{
+		margin-top: 40px;
+
+		ul{
+			margin-left: 0px;
+			list-style: none;
+
+			li{
+				font-size: 20px;
+				padding: 15px 15px 15px 25px;
+				color: #fff;
+
+				i{
+					margin-right: 20px;
+				}
+
+				&:hover{
+					background-color: #332b28;
+					border-radius: 30px 0px 0px 30px;
+				}
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 1024px) {
+	.sidebar{
+		min-height: unset;
+		background-color: #fab200;
+
+		.social-media{
+			display: none;
+		}
+
+		.logo{
+			display: none;
+		}
+
+		h4{
+			display: none;
+		}
+
+		img{
+			display: none;
+		}
+
+		.menu{
+			margin-top: 0px;
+
+			ul{
+				margin-left: -20px;
+				li{
+					float: left;
+					width: 25%;
+					text-align: center;
+					font-size: 30px;
+
+					span{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+.content{
+	background-color: #332b28;
+	color: #fff;
+	position: relative;
+
+	button{
+		background-color: #fab200;
+		color: #332b28;
+		width: 180px;
+		height: 40px;
+		border-radius: 20px;
+		font-weight: 800;
+		border: 1px solid #fff;
+		float: right;
+		transition: all 0.95s ease;
+
+		&:hover{
+			background-color: transparent;
+			color: #fab200;
+		}
+	}
+
+	h3{
+		font-size: 36px;
+	}
+
+	h2{
+		font-size: 72px;
+	}
+
+	p{
+		font-size: 30px;
+	}
+
+	.slider{
+
+		.cat{
+			animation: 2s ease-out 0s 1 slideInFromLeft;
+		}
+		
+	}
+
+	@keyframes slideInFromLeft {
+	  0% {
+	    transform: translateX(100%);
+	  }
+	  100% {
+	    transform: translateX(0);
+	  }
+	}
+
+	.footer{
+		background-color: #c5c3c5;
+		font-size: 55px;
+		color: #332b28;
+		font-weight: 800;
+		position:absolute;
+		bottom: 0;
+		left: 15px;
+		right: 15px;
+
+		i{
+			margin-right: 30px;
+		}
+
+		.doller{
+			background-color: #fab200;
+		}
+
+	}
+}
+
+
+@media screen and (max-width: 1024px) {
+
+	.content{
+		.footer{
+			position: unset;
+		}
+	}
+}
+
+@media screen and (max-width: 420px) {
+
+	img{
+		display: none;
+	}
+
+	.content{
+		.footer{
+			font-size: 30px;
+		}
+	}
+
+}
